@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tabelas</title>
+</head>
+
+<body>
+    <h1>Trabalhando com tabelas</h1>
+    <p>No HTML os dados tabulares são aqueles que podem ser representados visualmente em forma de tabela.</p>
+    <p>A elabora de uma tabela consiste em uma combinação de linhas e colunas, resultando em um forma objetiva e
+        ordenada de expor as informações:</p>
+
+    <h2>Tabela simples:</h2>
+    <!--O atributo "border" no html5 não está mais sendo utilizado, pois essa conf é realizada dentro do css.-->
+    <table border="1">
+        <tr><!--é tido como linha-->
+            <td>Violão</td><!--é tido como célula-->
+            <td>Guitarra</td>
+        </tr>
+        <tr>
+            <td>Violino</td>
+            <td>Piano</td>
+        </tr>
+    </table>
+
+    <h2>Tabela com células de título:</h2>
+    <table border="1">
+        <tr>
+            <th>Instrumentos de corda</th>
+            <th>Instrumentos de sopro</th>
+        </tr>
+        <tr>
+            <td>Violino</td>
+            <td>Flauta</td>
+        </tr>
+        <tr>
+            <td>Piano</td>
+            <td>Corneta</td>
+        </tr>
+    </table>
+
+    <h2>Cabeçalho na vertical:</h2>
+    <table border="1">
+        <tr>
+            
+            <th>Livros</th>
+            <td>Arte moderna</td>
+            <td>Programação</td>
+    
+        </tr>
+        <tr>
+            <th>Quantidade</th>
+            <td>500 exemplares</td>
+            <td>600 exemplares</td>
+        </tr>
+    </table>
+
+    <h2>Cabeçalho, corpo e rodapé da tabela:</h2>
+
+    <p>Esses elementos criam seções dentro da tabela que podem receber uma informação diferenciada, útil para formação
+        de tabelas com muitos dados.</p>
+        <table border="1">
+            <caption>Tabela thead / tfoot / tbody</caption>
+            <thead>
+                <tr>
+                    <th colspan="2">Coluna 1</th>
+                    <th>Coluna 2</th>
+                    <th>Coluna 3</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>Resultado 1</td>
+                    <td>Resultado 2</td>
+                    <td>Resultado 3</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td rowspan="2">Conteúdo A</td>
+                    <td>Conteúdo B</td>
+                    <td>Conteúdo C</td>
+                </tr>
+                <tr>
+                    <td>Conteúdo D</td>
+                    <td>Conteúdo E</td>
+                    <td>Conteúdo F</td>
+                </tr>
+                <tr>
+                    <td>Conteúdo G</td>
+                    <td>Conteúdo H</td>
+                    <td>Conteúdo I</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.122569260109!2d-46.69439568923983!3d-23.52809357873442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8775663b04f%3A0x923835e9005f8309!2sSenac%20Lapa%20Tito!5e0!3m2!1spt-BR!2sbr!4v1701991473726!5m2!1spt-BR!2sbr" width="600" height="450" style="border:ipx;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+</html>
