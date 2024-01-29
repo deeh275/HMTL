@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>formulário</title>
+    <link rel="stylesheet" href="co.css">
+
+    <style>
+        #name {
+            width: 650px;
+        }
+
+        #cep{
+            width: 250px;
+        }
+
+        #cpf{
+            width: 250px;
+        }
+
+        #genero{
+            width: 270px;
+        }
+
+        #cidade{
+            width: 250px;
+        }
+
+        #estado{
+            width: 250px;
+        }
+
+        #bairro{
+            width: 250px;
+        }
+
+        #rua{
+            width: 650px;
+        }
+        
+
+
+    </style>
+</head>
+
+
+<body>
+    <h1>CONTRATANTE</h1>
+
+
+    <form action="#" method="post">
+        <div class="input-group">
+
+            <div class="input-box">
+                <label for="Nome/Nome social">Nome/Nome social</label>
+                <input required type="text" id="name" name="Nome/Nome social">
+            </div>
+
+            <div class="input-box">
+                <label for="CPF/cnpj:">CPF</label>
+                <input required type="tel" id="cpf" name="cpf">
+            </div>
+
+            <div class="input-box">
+
+
+                <label for="Gênero">Gênero(Opcional)</label>
+                <input required type="text" id="genero" name="Gênero">
+            </div>
+        </div>
+
+            <div class="input-check">
+                <input type="checkbox" id="Pessoa Física" name="Interesse">
+                <label for="Pessoa fisica">Pessoa fisica</label>
+            </div>
+
+            <div class="input-check">
+                <input type="checkbox" id="Pessoa Jurídica" name="Interesse">
+                <label for="Pessoa jurdica">Pessoa juridica</label>
+            </div>
+
+            <div class="input-group">
+
+            <div class="input-box">
+                <label for="CEP:">CEP</label>
+                <input required type="tel" id="cep" name="CEP">
+            </div>
+
+            <div class="input-box">
+                <label for="Cidade">Cidade</label>
+                <input required type="text" id="cidade" name="Cidade">
+            </div>
+            <div class="input-box">
+                <label for="Estado">Estado</label>
+                <input required type="text" id="estado" name="Estado">
+            </div>
+
+            <div class="input-box">
+                <label for="Bairro:">Bairro</label>
+                <input required type="text" id="bairro" name="Bairro">
+            </div>
+
+            <div class="input-box">
+                <label for="Rua">Rua</label>
+                <input required type="text" id="rua" name="rua">
+            </div>
+        </div>
+
+        <h2>ADICIONAR FOTOS</h2>
+
+        <div class="input-check">
+            <div>
+                <input type="checkbox" id="Aceitar" name="Interesse">
+                <label for="Aceitar">lI E ACEITO TERMOS E CONDIÇÕES.</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="Declaro" name="Interesse">
+                <label for="Declaro">DECLARO QUE AS INFORMAÇÕES SÃO VERDADEIRAS.</label>
+            </div>
+        </div>
+
+    </form>
+
+
+</body>
