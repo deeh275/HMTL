@@ -1,0 +1,42 @@
+h1 {
+    background-color:#F47907;
+    color: white;
+    margin-bottom: 60px;
+    text-align: center;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+padding: 10px;
+
+}
+
+body{
+    width: 700px;
+    font-family: arial,verdana,sans-serif;
+}
+
+input {
+    background-color:#F47907;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: sans-serif;
+
+
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
