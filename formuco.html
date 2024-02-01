@@ -8,39 +8,41 @@
 
     <style>
         #name {
-            width: 650px;
+            width: 670px;
         }
 
-        #cep{
+        #cep {
             width: 250px;
         }
 
-        #cpf{
+        #cpf {
             width: 250px;
         }
 
-        #genero{
+        #genero {
             width: 270px;
         }
 
-        #cidade{
+        #cidade {
             width: 250px;
         }
 
-        #estado{
+        #estado {
             width: 250px;
         }
 
-        #bairro{
+        #bairro {
             width: 250px;
         }
 
-        #rua{
-            width: 650px;
+        #rua {
+            width: 670px;
         }
-        
 
-
+        form {
+            text-indent: 10px;
+            
+        }
     </style>
 </head>
 
@@ -65,22 +67,27 @@
             <div class="input-box">
 
 
-                <label for="Gênero">Gênero(Opcional)</label>
-                <input required type="text" id="genero" name="Gênero">
+                <label for="genero">Gênero:</label>
+                <select name="genero" id="genero">          
+                <option value="">Masculino</option>
+                <option value="">Feminino</option>
+                <option value="">outros</option>
+                </select>
             </div>
         </div>
-
-            <div class="input-check">
+        <div class="input-check">
+            <div class="input-chec">
                 <input type="checkbox" id="Pessoa Física" name="Interesse">
                 <label for="Pessoa fisica">Pessoa fisica</label>
-            </div>
 
-            <div class="input-check">
+
+
                 <input type="checkbox" id="Pessoa Jurídica" name="Interesse">
                 <label for="Pessoa jurdica">Pessoa juridica</label>
             </div>
+        </div>
 
-            <div class="input-group">
+        <div class="input-group">
 
             <div class="input-box">
                 <label for="CEP:">CEP</label>
@@ -118,6 +125,10 @@
             <div>
                 <input type="checkbox" id="Declaro" name="Interesse">
                 <label for="Declaro">DECLARO QUE AS INFORMAÇÕES SÃO VERDADEIRAS.</label>
+            </div>
+
+            <div class="continue-button">
+                <button>Cadastrar</button>
             </div>
         </div>
 

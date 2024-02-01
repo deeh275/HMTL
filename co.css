@@ -1,22 +1,44 @@
-h1 {  
-    font-family: arial,verdana,sans-serif;  
-    background-color:#0CA4F2;
+h1 {
+    font-family: arial, verdana, sans-serif;
+    background-color: #0CA4F2;
     color: white;
     margin-bottom: 60px;
     text-align: center;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-padding: 10px;
+    padding: 10px;
 
 }
 
-body{
+h2{
+    /* margin-left: 20px; */
+}
+
+body {
     width: 700px;
-    font-family: arial,verdana,sans-serif;
+    font-family: arial, verdana, sans-serif;
+}
+
+.continue-button{
+    text-align: center;
+}
+ 
+ 
+.continue-button button{
+    padding: 10px;
+    width: 100px;
+    margin-top: 60px;color: white;
+background-color: #0CA4F2;
+border: none;
+border-radius: 20px;
+}
+
+.continue-button button:hover{
+    background-color: blue;
 }
 
 input {
-    background-color:#0CA4F2;
+    background-color: #0CA4F2;
     border: none;
     border-radius: 20px;
     color: white;
@@ -28,7 +50,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 1rem;
+    padding-bottom: 1rem;  
     font-family: sans-serif;
 
 
@@ -40,4 +62,24 @@ input {
     margin-bottom: 1.1rem;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+form{
+    margin-left: 10px;
+
+}
+
+.input-check{
+  margin-bottom: 20px;
+  text-indent: 0px;
+}
+
+select{
+    background-color:#0CA4F2;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    width: 190px;
 }
