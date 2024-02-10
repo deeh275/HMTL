@@ -1,0 +1,42 @@
+body {
+    width: 900px;
+    font-family: sans-serif;
+    margin: auto;
+}
+
+.input-button {
+    display: flex;
+    margin-top: 25px;
+    margin-left: 50px;
+
+}
+
+.continue-button button {
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: gray;
+    margin: 5px;
+    border: none;
+
+
+}
+
+.continue-button button:hover {
+    background-color: rgb(48, 47, 47);
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+li {
+    width: 260px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid rgb(207, 205, 205);
+    padding: 5px;
+}
