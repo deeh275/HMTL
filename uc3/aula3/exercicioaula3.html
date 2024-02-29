@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <p id="texto"></p>
+    <button id="botao">clique aqui</button>
+
+    <script>
+
+        var texto = document.getElementById("texto")
+        var botao = document.getElementById("botao")
+
+        botao.addEventListener("click", function(){
+            texto.innerText = "FUNCIONOU!!!"
+        })
+    </script>
+</body>
+
+</html>

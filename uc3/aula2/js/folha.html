@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>FOLHA DE PAGAMENTO</title>
+    </head>
+<body>
+    <script>
+        /*
+        VT - 6% - 0.06%
+        VR - se salário for até 2500 = R$ 180
+        VR - se salário for acima de 2501 = R$ 250
+        NOME, SÁLARIO, DEPARTAMENTO
+        */
+
+        var nome = prompt("Nome completo")
+        var salario = parseFloat(prompt("Salário"))
+        var Dpto = prompt("Departamento")
+
+        var descVT = salario * 0.06
+
+        var descVR = 0
+        if(salario <= 2500){
+            descVR = 180
+
+        }else {
+            descVR = 250
+        }
+
+        var salarioliquido = salario - descVT - descVR
+
+        alert("nome completo: " + nome + " salario Bruto R$ " + salario + " Departamento " + Dpto + " salario liquido R$ " + salarioliquido)
+    </script>
+</body>
+</html>

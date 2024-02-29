@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+ 
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 900px;
+        }
+ 
+        table,
+        table tr,
+        table tr td,
+        table tr th {
+            border: 1px solid aqua;
+            padding: 2px;
+            border-radius: 5px;
+        }
+ 
+        h1 {
+            text-align: center;
+            background-color: rgba(3, 247, 247, 0.664);
+            border-radius: 20px;
+            padding: 5px;
+        }
+ 
+        input {
+            border-radius: 20px;
+            padding: 5px;
+            background-color: rgba(3, 247, 247, 0.664);
+            width: 400px;
+ 
+ 
+        }
+ 
+        button {
+            width: 150px;
+            border-radius: 15px;
+            padding: 10px;
+            background-color: rgba(3, 247, 247, 0.664);
+        }
+ 
+        select {
+            width: 410px;
+            border-radius: 20px;
+            padding: 5px;
+            background-color: rgba(3, 247, 247, 0.664);
+        }
+ 
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem;
+            text-indent: 10px;
+ 
+        }
+ 
+        #botao {
+            padding-left: 1rem;
+        }
+ 
+    </style>
+</head>
+ 
+<body>
+    <h1>Lista de Compras</h1>
+    <div id="container">
+            <label for="roupa">Tipo de Roupa:</label>
+            <input type="text" name="roupa" id="roupa">
+       
+            <label for="cor">Cor:</label>
+            <input type="text" name="cor" id="cor">
+       
+            <label for="quan">Quantidade:</label>
+            <input type="number" name="quan" id="quan">
+       
+            <label for="tam">Tamanho</label>
+            <select name="tam" id="tam">
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+            </select>
+       
+    </div>
+ 
+    <div id="botao">
+        <button id="selecionar">Selecionar</button>
+    </div>
+    <h4>Carrinho</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Roupas</th>
+                <th>Cor</th>
+                <th>Quantidade</th>
+                <th>Tamanho</th>
+            </tr>
+ 
+        </thead>
+        <tbody id="compras"></tbody>
+    </table>
+ 
+ 
+ 
+    <script>
+        var roupa = document.getElementById("roupa")
+        var tam = document.getElementById("tam")
+        var quan = document.getElementById("quan")
+        var cor = document.getElementById("cor")
+        var botaoSelecionar = document.getElementById("selecionar")
+        var compras = document.getElementById("compras")
+ 
+        var roupas = []
+        var tama = []
+        var cores = []
+        var qnt = []
+ 
+ 
+        botaoSelecionar.addEventListener("click", function () {
+            roupas.push(roupa.value)
+            roupa.value = "";
+ 
+            cores.push(cor.value)
+            cor.value = "";
+ 
+            qnt.push(quan.value)
+            quan.value = "";
+ 
+            tama.push(tam.value)
+            tam.value = "";
+ 
+            mostrarCompras();
+        });
+ 
+        function mostrarCompras() {
+            var aux = "";
+ 
+            for (var cont = 0; cont < roupas.length; cont++) {
+                aux += '<tr>'
+ 
+                    + '<td>' + roupas[cont] + '</td>'
+                    + '<td>' + cores[cont] + '</td>'
+                    + '<td>' + qnt[cont] + '</td>'
+                    + '<td>' + tama[cont] + '</td>'
+ 
+                aux += '</tr>'
+ 
+            }
+            compras.innerHTML = aux;
+ 
+        }
+    </script>
+</body>
+ 
+</html>

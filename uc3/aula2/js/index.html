@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aula 02</title>
+</head>
+
+<body>
+    <!-- inicio do js -->
+    <script>
+        //SE - SENAO (condicionais)
+        //operadores logicos
+        /*
+        verificação de meta escolar
+         média = (n1 + n2 + n3 + n4) / 4
+
+         para que o aluno seja aprovado 
+         a média tem que ser igual ou maior ou igual a 6 para aprovação do aluno, senão o aluno esta reprovado
+
+         se media >= 6 entao
+           escreval(aprovado)
+         senao
+            escreval(reprovado)
+        */
+
+       /* var media = (5 + 6 + 7 + 8) / 4
+
+        if (media >= 6) { // se media >= 6 entao
+            alert("aprovado")
+        } else {//senao
+            alert("reprovado")
+        }
+
+        /*
+        se media >= 6 entao
+          aprovado
+        senao se media == 5 entao  
+          recuperação
+        senao 
+        reprovado  
+        */
+        /*if (media >= 6) {//se media >= 6 entao
+            alert("aprovado")
+        } else if (media == 5) {// senao se media == 5 entao
+            alert("recuperação")
+        } else { // senao
+            alert("reprovado")
+        }
+        /*
+        OPERADORES DE COMPRAÇÃO
+        == igualdade
+        === igualdade estrita
+        != diferença
+        <> diferença
+
+        */
+
+        var n1 = parseInt(prompt("Digite um numero"))
+        var n2 = parseInt(prompt("Digite um numero"))
+        var n3 = parseInt(prompt("Digite um numero"))
+        var n4 = parseInt(prompt("Digite um numero"))
+        var media =(n1 + n2 + n3 + n4) / 4
+        
+        if (media >= 6) {
+            alert("aprovado")
+        } else if (media == 5) {
+            alert("recuperação")
+        } else { 
+            alert("reprovado")
+        }
+    </script>
+    <!-- fim do js -->
+</body>
+
+</html>

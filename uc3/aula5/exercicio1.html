@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+
+<body>
+    <h1>Exercicio 5</h1>
+
+    <h4>Cadastro de notas:</h4>
+
+    <label for="">Nome completo:</label>
+    <input type="text" name="nome" id="nome">
+
+    <label for="">Série:</label>
+    <input type="text" name="serie" id="serie">
+
+    <label for="materia">Matéria:</label>
+    <select name="materia" id="materia">
+        <option value="Português">Português</option>
+        <option value="Matemática">Matemática</option>
+    </select>
+
+    <label for="bim1">Bimestre 1:</label>
+    <input type="text" name="bim1" id="bim1">
+
+    <label for="bim2">Bimestre 2:</label>
+    <input type="text" name="bim2" id="bim2">
+
+    <label for="bim3">Bimestre 3:</label>
+    <input type="text" name="bim3" id="bim3">
+
+    <label for="bim4">Bimestre 4:</label>
+    <input type="text" name="bim4" id="bim4">
+
+    <button id="calcular">Calcular</button>
+    <h4>Boletim de Notas</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome Completo</th>
+                <th>Matéria</th>
+                <th>Bim 1</th>
+                <th>Bim 2</th>
+                <th>Bim 3</th>
+                <th>Bim 4</th>
+                <th>Média</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+        <tbody id="boletim"></tbody>
+    </table>
+    
+    <script>
+
+        var nome = [];
+        var serie = [];
+        var materia = [];
+        var bim1 = [];
+        var bim2 = [];
+        var bim3 = [];
+        var bim4 = [];
+        var situacao = [];
+        var nome = document.getElementById("nome");
+        var serie = document.getElementById("serie");
+        var materia = document.getElementById("materia");
+        var bim1 = document.getElementById("bim1");
+        var bim2 = document.getElementById("bim2");
+        var bim3 = document.getElementById("bim3");
+        var bim4 = document.getElementById("bim4");
+        var boletim = document.getElementById("boletim");
+        var botaoInserir = document.getElementById("calcular");
+
+        botaoInserir.addEventListener("click", function () {
+            nome.push(nome.value);
+            nome.value = "";
+
+            serie.push(serie.value);
+            serie.value = "";
+
+            materia.push(materia.value);
+            materia.value = "";
+
+            aBim1.push(parseInt(bim1.value));
+            bim1.value = "";
+
+            aBim2.push(parseInt(bim2.value));
+            bim2.value = "";
+
+            aBim3.push(parseInt(bim3.value));
+            bim3.value = "";
+
+            aBim4.push(parseInt(bim4.value));
+            bim4.value = "";
+
+
+
+
+            mostrarLista();
+
+        })
+
+        function mostrarLista() {
+            var aux = "";
+
+            for (var cont = 0; cont < nomes.length; cont++) {
+                var media = (aBim1[cont] = aBim2[cont] = aBim3[cont] = aBim4[cont]) / 4
+                aux += '<tr>'
+                    + '<td>' + nome[cont] + '</td>'
+                    + '<td>' + materia[cont] + '</td>'
+                    + '<td>' + aBim1[cont] + '</td>'
+                    + '<td>' + aBim2[cont] + '</td>'
+                    + '<td>' + aBim3[cont] + '</td>'
+                    + '<td>' + aBim4[cont] + '</td>'
+                    + '<td>' + media + '</td>';
+                if (media >= 7) {
+                    aux += '<td> Aprovado </td>'
+                } else {
+                    aux += '<td>Reprovado</td>'
+                }
+
+                aux += '</tr>';
+            }
+
+            situacao.innerHTML = aux;
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

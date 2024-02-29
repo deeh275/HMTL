@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM - JS</title>
+</head>
+
+<body>
+    <p id="texto-1">Olá!</p>
+    <input type="text" id="nome">
+    <button id="botao">Clique aqui</button>
+
+    <script>
+        // capturar um evento a partir do js 
+        // capturar uma modificação apartir de um evento do js
+        var texto1 = document.getElementById("texto-1")
+        var nome = prompt("Digite seu nome")
+
+        texto1.style.background = "blue"
+        texto1.style.color = "white"
+        texto1.innerText = "Olá! " + nome
+
+
+
+        console.log(texto1)
+
+        /*
+        EVENTOS JS
+        onclick - Escutar o clique do mouse
+
+        onkeypress - escutar a digitação no elemento html no momento da pressão na tecla
+
+        onkeyup - escutar a digitação no elemento html no momento em que solto a tecla
+
+        onblur - escuta um evento de saida de uma input em foco
+
+        oncheng - escuta a modificação ou mudança do estado atual do elemento 
+
+        addEventListener(nomedoevento, function()) 
+        disparar a ação a partir do evento
+        - escutador de eventos do js
+
+        */
+
+        var botao = document.getElementById("botao")
+        botao.addEventListener("click", function () {
+        })
+    </script>
+</body>
+
+</html>

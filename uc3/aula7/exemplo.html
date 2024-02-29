@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+
+    <style>
+        body{
+            background-color: white;
+            color: black;
+        }
+
+        .mudarCor{
+            background-color: #222;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body id="pagina">
+
+    <h1>Aula 07</h1>
+    <button onclick="mudarTema()">Mudar Tema</button>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Eos natus dignissimos fugiat.
+        Dignissimos autem, excepturi, eaque deserunt esse sint,
+        est cupiditate harum quia facere incidunt fugiat veniam fuga iste voluptatum.</p>
+
+
+<script>
+    let pagina = document.getElementById("pagina");
+
+    function mudarTema() {
+        pagina.classList.toggle("mudarCor")
+        console.log(pagina.classList)
+    }
+</script>
+</body>
+
+</html>

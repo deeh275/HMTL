@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 04 - arrays</title>
+</head>
+<body>
+<script>
+
+    //Vetores - arrays
+
+var frutas = ["uva", "Banana", "Maça", "limon", "breja", "churras", "comida", "carro"]
+var numerais = [1, 2, 3, 4]
+var logicos = [true, false]
+var multiplosDados = ["fulano", 10, true, 1.75]
+
+console.log(frutas[0])
+
+/*
+
+Laço de repetição - for / para
+
+*/
+
+// for (var x = 0; x < frutas.length; x++){
+//     console.log(frutas[x])
+// }
+
+/*
+
+Laço de repetição - while / enquanto
+
+*/
+
+var x = 0
+while(x < frutas.length){
+    console.log(frutas[x])
+    x++
+}
+
+/*
+
+Laço de repetição - map / forEach 
+
+*/
+
+frutas.map(item =>{
+    console.log(item)
+})
+</script>
+</body>
+</html>
