@@ -1,0 +1,64 @@
+[21:56] ARTHUR AMORIM GOMES
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays/laços</title>
+    <style>
+       ul{
+        list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aula 10-Arrays/Laço de repetição(exercícios de revisão)</h1>
+   
+        <div class="formulario">
+            <form id="formulario">
+                <input type="text" name="nome" id="nome" placeholder="Nome completo">
+                <input type="text" name="email" id="email" placeholder="Email">
+                <input type="text" name="assunto" id="assunto" placeholder="Assunto">
+                <input type="text" name="mensagem" id="mensagem" placeholder="Mensagem">
+                <button id="btn-enviar">Enviar</button>
+            </form>
+        </div>
+   
+    <div class="resultados"></div>
+ 
+<script>
+var formulario=document.getElementById("formulario")
+var nomes=[]
+var emails=[]
+var assuntos=[]
+var mensagens=[]
+var tabela = document.querySelector(".resultados");
+var botao = document.getElementById("btn-enviar");
+ 
+botao.addEventListener("click", function (event) {
+            event.preventDefault();
+ 
+            nomes.push(formulario.nome.value)
+            emails.push(formulario.email.value)
+            assuntos.push(formulario.assunto.value)
+            mensagens.push(formulario.mensagem.value)
+ 
+            mostrar();
+        })
+ 
+function mostrar() {
+    var aux = "";
+    for (var cont = 0; cont < nomes.length; cont++){
+        aux += '<ul>'
+            + '<li>' + nomes[cont] + '</li>'
+            + '<li>' + emails[cont] + '</li>'
+            + '<li>' + assuntos[cont]+ '</li>'
+            + '<li>' + mensagens[cont]+ '</li>'
+        aux += '</ul>';
+    }
+    tabela.innerHTML=aux;
+}
+</script>
+ 
+</body>
+</html>

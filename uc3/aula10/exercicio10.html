@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contrato</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+   
+}
+ 
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+   
+}
+ 
+.titulo {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: #0056b3;
+    border-radius: 20px;
+}
+ 
+#form{
+    border: solid 1px gray;
+    width: 800px;
+    border-radius: 10px;
+ 
+}
+ 
+#botao{
+  margin: 20px 350px;
+}
+ 
+#enviar{
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #09c7f775;
+    color: white;
+}
+ 
+form{
+    width: 800px;
+    height: 500px;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.966);
+}
+ 
+form input, textarea{
+    width: 780px;
+    height: 50px;
+    border-radius: 10px;
+    text-indent: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.966);
+    border: none;
+}
+ 
+ 
+form div{
+    margin-bottom: 10px;
+}
+ 
+form textarea{
+    height: 150px;
+}
+   
+ 
+table{
+    border: solid 1px grey;
+}
+ 
+table, th, td{
+    width: 780px;
+    padding: 10px;
+    border: solid 1px grey;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.966);
+    border-radius: 5px;
+}
+ 
+ 
+    </style>
+ 
+</head>
+ 
+<body>
+    <div class="titulo">
+        <h3>Formulário de contato</h3>
+        <h3>Lista de contato</h3>
+    </div>
+ 
+    <div class="container">
+ 
+        <form id="form-contato">
+ 
+            <div>
+                <label for="nome"></label>
+                <input type="text" name="nome" placeholder="Nome completo" id="nome">
+            </div>
+ 
+            <div>
+                <label for="email"></label>
+                <input type="email" name="email" placeholder="E-mail" id="email">
+            </div>
+ 
+            <div>
+                <label for="telefone"></label>
+                <input type="text" name="telefone" placeholder="Telefone" id="telefone">
+            </div>
+ 
+            <div>
+                <label for="assunto"></label>
+                <input type="text" name="assunto" placeholder="Assunto" id="assunto">
+            </div>
+ 
+            <div>
+                <label for="mensagem"></label>
+                <textarea name="mensagem" placeholder="Mensagem" id="mensagem" cols="23" rows="2"></textarea>
+            </div>
+ 
+            <div id="botao">
+                <button id="enviar">Enviar</button>
+            </div>
+        </form>
+ 
+ 
+        <div id="form"></div>
+    </div>
+ 
+    <script>
+        var formulario = document.getElementById("form-contato");
+ 
+        formulario.addEventListener("submit", function () {
+            event.preventDefault();
+        })
+        var nome = document.getElementById("nome")
+        var email = document.getElementById("email")
+        var telefone = document.getElementById("telefone")
+        var assunto = document.getElementById("assunto")
+        var mensagem = document.getElementById("mensagem")
+        var botaoEnviar = document.getElementById("enviar")
+        var formulario = document.getElementById("form-contato")
+ 
+        var nomes = []
+        var emails = []
+        var telefones = []
+        var assuntos = []
+        var mensagens = []
+        var formularios = []
+ 
+ 
+ 
+ 
+        botaoEnviar.addEventListener("click", function () {
+            nomes.push(nome.value)
+            nome.value = "";
+ 
+            emails.push(email.value)
+            email.value = "";
+ 
+            telefones.push(telefone.value)
+            telefone.value = "";
+ 
+            assuntos.push(assunto.value)
+            assunto.value = "";
+ 
+            mensagens.push(mensagem.value)
+            mensagem.value = "";
+ 
+ 
+            mostrarForm();
+        });
+ 
+        function mostrarForm() {
+            var aux = "";
+ 
+            for (var cont = 0; cont < nomes.length; cont++) {
+                aux += '<table>'
+                    + '<tr>'
+                    + '<td>' + "Nome:" + '</td>'
+                    + '<td>' + nomes[cont] + '</td>'
+                    + '</tr>'
+ 
+                    + '<tr>'
+                    + '<td>' + "E-mail:" + '</td>'
+                    + '<td>' + emails[cont] + '</td>'
+                    + '</tr>'
+ 
+                    + '<tr>'
+                    + '<td>' + "Telefone:" + '</td>'
+                    + '<td>' + telefones[cont] + '</td>'
+                    + '</tr>'
+ 
+                    + '<tr>'
+                    + '<td>' + "Assunto:" + '</td>'
+                    + '<td>' + assuntos[cont] + '</td>'
+                    + '</tr>'
+ 
+                    + '<tr>'
+                    + '<td>' + "Mensagem:" + '</td>'
+                    + '<td>' + mensagens[cont] + '</td>'
+                    + '</tr>'
+ 
+                aux += '</table>'
+            }
+            form.innerHTML = aux;
+        }
+    </script>
+</body>
+ 
+</html>
